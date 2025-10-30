@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollCarousel.js - Live Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .demo-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .demo-section h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .demo-section p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .controls label {
+            font-weight: 600;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+            font-size: 0.9em;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 5px 5px 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .demo-section {
+                padding: 20px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 ScrollCarousel.js</h1>
+            <p>Infinite Scroll Carousel Library - Live Demo</p>
+            <div style="margin-top: 20px;">
+                <span class="badge">v1.0.0</span>
+                <span class="badge">Zero Dependencies</span>
+                <span class="badge">5KB Minified</span>
+            </div>
+        </header>
+
+        <!-- Demo 1: Image Carousel -->
+        <div class="demo-section">
+            <h2>📷 Demo 1: Image Carousel</h2>
+            <p>A smooth scrolling image carousel with automatic cloning for infinite loop.</p>
+            <div class="code-block">new ScrollCarousel('#carousel1', {
+  cardWidth: 250,
+  cardHeight: 300,
+  items: [
+    { type: 'image', src: 'image.jpg' }
+  ]
+});</div>
+            <div id="carousel1"></div>
+        </div>
+
+        <!-- Demo 2: Text Carousel with Reverse -->
+        <div class="demo-section">
+            <h2>🔄 Demo 2: Reverse Scroll with Emojis</h2>
+            <p>Text-based carousel scrolling in reverse direction with custom styling.</p>
+            <div class="code-block">new ScrollCarousel('#carousel2', {
+  direction: 'reverse',
+  speed: 8,
+  items: [
+    { type: 'text', content: '🚀 Innovation' }
+  ]
+});</div>
+            <div id="carousel2"></div>
+        </div>
+
+        <!-- Demo 3: Mixed Content -->
+        <div class="demo-section">
+            <h2>🎭 Demo 3: Mixed Content (Image + Text)</h2>
+            <p>Combine images with captions for product showcases or portfolios.</p>
+            <div class="code-block">new ScrollCarousel('#carousel3', {
+  items: [
+    { type: 'mixed', src: 'photo.jpg', content: 'Caption' }
+  ]
+});</div>
+            <div id="carousel3"></div>
+        </div>
+
+        <!-- Demo 4: Interactive Controls -->
+        <div class="demo-section">
+            <h2>🎮 Demo 4: Interactive Controls</h2>
+            <p>Control the carousel with buttons - pause, play, change direction and speed.</p>
+            
+            <div class="controls">
+                <label>Playback:</label>
+                <button onclick="carousel4.pause()">⏸️ Pause</button>
+                <button onclick="carousel4.play()">▶️ Play</button>
+                
+                <label style="margin-left: 20px;">Direction:</label>
+                <button onclick="carousel4.updateDirection('forward')">➡️ Forward</button>
+                <button onclick="carousel4.updateDirection('reverse')">⬅️ Reverse</button>
+                
+                <label style="margin-left: 20px;">Speed:</label>
+                <button onclick="carousel4.updateSpeed(5)">⚡ Fast</button>
+                <button onclick="carousel4.updateSpeed(15)">🐢 Slow</button>
+            </div>
+
+            <div id="carousel4"></div>
+        </div>
+
+        <!-- Demo 5: Logo Carousel -->
+        <div class="demo-section">
+            <h2>🏢 Demo 5: Logo/Brand Showcase</h2>
+            <p>Perfect for displaying partner logos or brand showcases with transparent backgrounds.</p>
+            <div id="carousel5"></div>
+        </div>
+
+        <!-- Demo 6: Product Carousel -->
+        <div class="demo-section">
+            <h2>🛍️ Demo 6: E-commerce Product Carousel</h2>
+            <p>Showcase products with images and prices in an engaging carousel format.</p>
+            <div id="carousel6"></div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ using ScrollCarousel.js</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/YOUR_USERNAME/scrollcarousel-js" target="_blank">📦 View on GitHub</a> • 
+                <a href="../scrollcarousel.js" target="_blank">⬇️ Download</a> • 
+                <a href="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/scrollcarousel-js/scrollcarousel.js" target="_blank">🌐 CDN Link</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Include ScrollCarousel.js -->
+    <script src="../scrollcarousel.js"></script>
+    
+    <script>
+        // Demo 1: Image Carousel
+        var carousel1 = new ScrollCarousel('#carousel1', {
+            speed: 12,
+            cardWidth: 250,
+            cardHeight: 300,
+            backgroundColor: 'rgb(240,248,255)',
+            cardBackground: 'rgb(70,130,180)',
+            cardBorderRadius: 15,
+            imageWidth: '100%',
+            imageHeight: '100%',
+            imageFit: 'cover',
+            items: [
+                { type: 'image', src: 'https://picsum.photos/250/300?random=1', alt: 'Nature 1' },
+                { type: 'image', src: 'https://picsum.photos/250/300?random=2', alt: 'Nature 2' },
+                { type: 'image', src: 'https://picsum.photos/250/300?random=3', alt: 'Nature 3' },
+                { type: 'image', src: 'https://picsum.photos/250/300?random=4', alt: 'Nature 4' },
+                { type: 'image', src: 'https://picsum.photos/250/300?random=5', alt: 'Nature 5' }
+            ]
+        });
+
+        // Demo 2: Text Carousel with Reverse
+        var carousel2 = new ScrollCarousel('#carousel2', {
+            direction: 'reverse',
+            speed: 8,
+            cardWidth: 220,
+            cardHeight: 280,
+            backgroundColor: 'rgb(255,240,245)',
+            cardBackground: 'linear-gradient(135deg, rgb(220,20,60), rgb(139,0,139))',
+            textColor: 'white',
+            fontSize: '24px',
+            items: [
+                { type: 'text', content: '🚀 Innovation' },
+                { type: 'text', content: '💡 Creativity' },
+                { type: 'text', content: '🎯 Focus' },
+                { type: 'text', content: '⭐ Excellence' },
+                { type: 'text', content: '🔥 Passion' },
+                { type: 'text', content: '🌟 Quality' }
+            ]
+        });
+
+        // Demo 3: Mixed Content
+        var carousel3 = new ScrollCarousel('#carousel3', {
+            speed: 15,
+            cardWidth: 240,
+            cardHeight: 340,
+            backgroundColor: 'rgb(240,255,240)',
+            cardBackground: 'rgb(60,179,113)',
+            cardBorderRadius: 20,
+            textColor: 'white',
+            fontSize: '18px',
+            fontWeight: '600',
+            imageWidth: '90%',
+            items: [
+                { type: 'mixed', src: 'https://picsum.photos/220/180?random=10', content: '🏔️ Mountain View' },
+                { type: 'mixed', src: 'https://picsum.photos/220/180?random=11', content: '🌊 Ocean Waves' },
+                { type: 'mixed', src: 'https://picsum.photos/220/180?random=12', content: '🌆 City Lights' },
+                { type: 'mixed', src: 'https://picsum.photos/220/180?random=13', content: '🌲 Forest Path' },
+                { type: 'mixed', src: 'https://picsum.photos/220/180?random=14', content: '🏜️ Desert Sun' }
+            ]
+        });
+
+        // Demo 4: Interactive Controls
+        var carousel4 = new ScrollCarousel('#carousel4', {
+            speed: 10,
+            cardWidth: 200,
+            cardHeight: 260,
+            backgroundColor: 'rgb(230,245,255)',
+            cardBackground: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            textColor: 'white',
+            fontSize: '28px',
+            items: [
+                { type: 'text', content: '1️⃣' },
+                { type: 'text', content: '2️⃣' },
+                { type: 'text', content: '3️⃣' },
+                { type: 'text', content: '4️⃣' },
+                { type: 'text', content: '5️⃣' }
+            ]
+        });
+
+        // Demo 5: Logo Carousel
+        var carousel5 = new ScrollCarousel('#carousel5', {
+            speed: 20,
+            cardWidth: 180,
+            cardHeight: 120,
+            cardBackground: 'white',
+            backgroundColor: '#f8f9fa',
+            cardBorderRadius: 12,
+            gap: 25,
+            imageFit: 'contain',
+            imageWidth: '70%',
+            imageHeight: '70%',
+            pauseOnHover: true,
+            items: [
+                { type: 'image', src: 'https://via.placeholder.com/150x80/667eea/ffffff?text=Brand+1' },
+                { type: 'image', src: 'https://via.placeholder.com/150x80/764ba2/ffffff?text=Brand+2' },
+                { type: 'image', src: 'https://via.placeholder.com/150x80/f093fb/ffffff?text=Brand+3' },
+                { type: 'image', src: 'https://via.placeholder.com/150x80/4facfe/ffffff?text=Brand+4' },
+                { type: 'image', src: 'https://via.placeholder.com/150x80/00f2fe/ffffff?text=Brand+5' },
+                { type: 'image', src: 'https://via.placeholder.com/150x80/43e97b/ffffff?text=Brand+6' }
+            ]
+        });
+
+        // Demo 6: E-commerce Products
+        var carousel6 = new ScrollCarousel('#carousel6', {
+            direction: 'reverse',
+            speed: 18,
+            cardWidth: 260,
+            cardHeight: 360,
+            backgroundColor: 'rgb(255,250,240)',
+            cardBackground: 'white',
+            cardBorderRadius: 16,
+            textColor: '#333',
+            fontSize: '20px',
+            fontWeight: '700',
+            imageWidth: '95%',
+            gap: 20,
+            items: [
+                { type: 'mixed', src: 'https://picsum.photos/240/200?random=20', content: '💰 $99.99' },
+                { type: 'mixed', src: 'https://picsum.photos/240/200?random=21', content: '💰 $149.99' },
+                { type: 'mixed', src: 'https://picsum.photos/240/200?random=22', content: '💰 $79.99' },
+                { type: 'mixed', src: 'https://picsum.photos/240/200?random=23', content: '💰 $199.99' },
+                { type: 'mixed', src: 'https://picsum.photos/240/200?random=24', content: '💰 $129.99' }
+            ]
+        });
+    </script>
+</body>
+</html>

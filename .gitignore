@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+```
+
+## 📁 Final File Structure:
+```
+scrollcarousel-js/
+├── scrollcarousel.js      ✅ Main library (I provided above)
+├── README.md              ✅ Documentation (I provided above)
+├── LICENSE                ✅ MIT License (copy text above)
+├── .gitignore             ✅ Git ignore file (copy text above)
+└── examples/
+    └── index.html         ✅ Demo page (I provided above)
