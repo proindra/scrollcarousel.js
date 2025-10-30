@@ -22,10 +22,12 @@ A lightweight, customizable infinite scroll carousel library for creating smooth
 
 ```html
 <!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/scrollcarousel-js/scrollcarousel.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js/scrollcarousel.js"></script>
+```
 
+```html
 <!-- Specific version (recommended) -->
-<script src="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/scrollcarousel-js@1.0.0/scrollcarousel.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js@1.0.0/scrollcarousel.js"></script>
 ```
 
 ### Via npm (coming soon)
@@ -234,14 +236,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🐛 Issues
 
-Found a bug? Please [open an issue](https://github.com/YOUR_USERNAME/scrollcarousel-js/issues).
+Found a bug? Please [open an issue](https://github.com/proindra/scrollcarousel.js/issues).
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Your Name - prajwalindrakh@gmail.com
 
-Project Link: [https://github.com/YOUR_USERNAME/scrollcarousel-js](https://github.com/YOUR_USERNAME/scrollcarousel-js)
+Project Link: [https://github.com/proindra/scrollcarousele.js](https://github.com/proindra/scrollcarousel.js)
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [PRAJWALINDRA]
