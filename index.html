@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
         header h1 {
             font-size: 3em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         header p {
@@ -45,7 +46,7 @@
             border-radius: 20px;
             padding: 30px;
             margin: 30px 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
         }
 
         .demo-section h2 {
@@ -149,22 +150,23 @@
             header h1 {
                 font-size: 2em;
             }
-            
+
             .demo-section {
                 padding: 20px;
             }
-            
+
             .controls {
                 flex-direction: column;
                 align-items: stretch;
             }
-            
+
             button {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -182,12 +184,12 @@
             <h2>📷 Demo 1: Image Carousel</h2>
             <p>A smooth scrolling image carousel with automatic cloning for infinite loop.</p>
             <div class="code-block">new ScrollCarousel('#carousel1', {
-  cardWidth: 250,
-  cardHeight: 300,
-  items: [
-    { type: 'image', src: 'image.jpg' }
-  ]
-});</div>
+                cardWidth: 250,
+                cardHeight: 300,
+                items: [
+                { type: 'image', src: 'image.jpg' }
+                ]
+                });</div>
             <div id="carousel1"></div>
         </div>
 
@@ -196,12 +198,12 @@
             <h2>🔄 Demo 2: Reverse Scroll with Emojis</h2>
             <p>Text-based carousel scrolling in reverse direction with custom styling.</p>
             <div class="code-block">new ScrollCarousel('#carousel2', {
-  direction: 'reverse',
-  speed: 8,
-  items: [
-    { type: 'text', content: '🚀 Innovation' }
-  ]
-});</div>
+                direction: 'reverse',
+                speed: 8,
+                items: [
+                { type: 'text', content: '🚀 Innovation' }
+                ]
+                });</div>
             <div id="carousel2"></div>
         </div>
 
@@ -210,10 +212,10 @@
             <h2>🎭 Demo 3: Mixed Content (Image + Text)</h2>
             <p>Combine images with captions for product showcases or portfolios.</p>
             <div class="code-block">new ScrollCarousel('#carousel3', {
-  items: [
-    { type: 'mixed', src: 'photo.jpg', content: 'Caption' }
-  ]
-});</div>
+                items: [
+                { type: 'mixed', src: 'photo.jpg', content: 'Caption' }
+                ]
+                });</div>
             <div id="carousel3"></div>
         </div>
 
@@ -221,16 +223,16 @@
         <div class="demo-section">
             <h2>🎮 Demo 4: Interactive Controls</h2>
             <p>Control the carousel with buttons - pause, play, change direction and speed.</p>
-            
+
             <div class="controls">
                 <label>Playback:</label>
                 <button onclick="carousel4.pause()">⏸️ Pause</button>
                 <button onclick="carousel4.play()">▶️ Play</button>
-                
+
                 <label style="margin-left: 20px;">Direction:</label>
                 <button onclick="carousel4.updateDirection('forward')">➡️ Forward</button>
                 <button onclick="carousel4.updateDirection('reverse')">⬅️ Reverse</button>
-                
+
                 <label style="margin-left: 20px;">Speed:</label>
                 <button onclick="carousel4.updateSpeed(5)">⚡ Fast</button>
                 <button onclick="carousel4.updateSpeed(15)">🐢 Slow</button>
@@ -256,16 +258,17 @@
         <footer>
             <p>Made with ❤️ using ScrollCarousel.js</p>
             <p style="margin-top: 10px;">
-                <a href="https://github.com/YOUR_USERNAME/scrollcarousel-js" target="_blank">📦 View on GitHub</a> • 
-                <a href="../scrollcarousel.js" target="_blank">⬇️ Download</a> • 
-                <a href="https://cdn.jsdelivr.net/gh/YOUR_USERNAME/scrollcarousel-js/scrollcarousel.js" target="_blank">🌐 CDN Link</a>
+                <a href="https://github.com/proindra/scrollcarousel.js" target="_blank">📦 View on GitHub</a> •
+                <a href="../scrollcarousel.js" target="_blank">⬇️ Download</a> •
+                <a href="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js/scrollcarousel.js"
+                    target="_blank">🌐 CDN Link</a>
             </p>
         </footer>
     </div>
 
-    <!-- Include ScrollCarousel.js -->
-    <script src="../scrollcarousel.js"></script>
-    
+    <!-- Latest version -->
+    <script src="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js/scrollcarousel.js"></script>
+
     <script>
         // Demo 1: Image Carousel
         var carousel1 = new ScrollCarousel('#carousel1', {
@@ -360,12 +363,12 @@
             imageHeight: '70%',
             pauseOnHover: true,
             items: [
-                { type: 'image', src: 'https://via.placeholder.com/150x80/667eea/ffffff?text=Brand+1' },
-                { type: 'image', src: 'https://via.placeholder.com/150x80/764ba2/ffffff?text=Brand+2' },
-                { type: 'image', src: 'https://via.placeholder.com/150x80/f093fb/ffffff?text=Brand+3' },
-                { type: 'image', src: 'https://via.placeholder.com/150x80/4facfe/ffffff?text=Brand+4' },
-                { type: 'image', src: 'https://via.placeholder.com/150x80/00f2fe/ffffff?text=Brand+5' },
-                { type: 'image', src: 'https://via.placeholder.com/150x80/43e97b/ffffff?text=Brand+6' }
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo2.svg' },
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo2.svg' },
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo2.svg' },
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo.svg' },
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo.svg' },
+                { type: 'svg', src: 'scrollcarousel-js/smaple logo/logo.svg' }
             ]
         });
 
@@ -393,4 +396,5 @@
         });
     </script>
 </body>
+
 </html>
