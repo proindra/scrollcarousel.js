@@ -1,9 +1,9 @@
 /**
- * ScrollCarousel.js v1.0.0
+ * ScrollCarousel.js v2.0.0
  * Infinite Scroll Carousel Library
  * https://github.com/proindra/scrollcarousel.js
  * 
- * Copyright (c) 2025
+ * Copyright (c) 2026
  * Released under the MIT License
  */
 

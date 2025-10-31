@@ -1,9 +1,13 @@
 # ScrollCarousel.js
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 A lightweight, customizable infinite scroll carousel library for creating smooth, animated carousels with images, text, or mixed content.
+
+## 🚀 Live Demo
+
+**[Try Vibex Markdown Editor](https://proindra.github.io/scrollcarousel.js/)**
 
 ## ✨ Features
 
@@ -240,10 +244,10 @@ Found a bug? Please [open an issue](https://github.com/proindra/scrollcarousel.j
 
 ## 📧 Contact
 
-Your Name - prajwalindrakh@gmail.com
+Your Name - scrollcarousel.js@gmail.com
 
 Project Link: [https://github.com/proindra/scrollcarousele.js](https://github.com/proindra/scrollcarousel.js)
 
 ---
 
-Made with ❤️ by [PRAJWALINDRA]
+Made with ❤️ by Team ScrollCarousel.js
