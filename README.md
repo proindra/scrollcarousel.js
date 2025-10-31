@@ -7,7 +7,7 @@ A lightweight, customizable infinite scroll carousel library for creating smooth
 
 ## 🚀 Live Demo
 
-**[Try Vibex Markdown Editor](https://proindra.github.io/scrollcarousel.js/)**
+**[View](https://proindra.github.io/scrollcarousel.js/)**
 
 ## ✨ Features
 
