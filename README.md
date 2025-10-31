@@ -33,7 +33,7 @@ A lightweight, customizable infinite scroll carousel library for creating smooth
 ### Via npm (coming soon)
 
 ```bash
-npm install scrollcarousel-js
+npm install scrollcarousel.js
 ```
 
 ### Manual Download
